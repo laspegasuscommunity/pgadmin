@@ -1,92 +1,83 @@
-# pgadmin
+<div align="center" id="top"> 
+  <img src="./.github/app.svg" alt="pgAdmin Logo" />
+</div>
 
+<h1 align="center">pgAdmin Compose Project</h1>
 
+<p align="center">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/laspegasuscommunity/pgadmin?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/laspegasuscommunity/pgadmin?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/laspegasuscommunity/pgadmin?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/laspegasuscommunity/pgadmin?color=56BEB8">
+  <img alt="Github issues" src="https://img.shields.io/github/issues/laspegasuscommunity/pgadmin?color=56BEB8" />
+  <img alt="Github forks" src="https://img.shields.io/github/forks/laspegasuscommunity/pgadmin?color=56BEB8" />
+  <img alt="Github stars" src="https://img.shields.io/github/stars/laspegasuscommunity/pgadmin?color=56BEB8" />
+</p>
 
-## Getting started
+<hr>
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+<p align="center">
+  <a href="#dart-о-проекте">О проекте</a> &#xa0; | &#xa0;
+  <a href="#sparkles-особенности">Особенности</a> &#xa0; | &#xa0;
+  <a href="#rocket-технологии">Технологии</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-требования">Требования</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-начало">Начало</a> &#xa0; | &#xa0;
+  <a href="#memo-лицензия">Лицензия</a> &#xa0; | &#xa0;
+  <a href="https://github.com/orgs/laspegasuscommunity/people" target="_blank">Авторы</a>
+</p>
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+<br>
 
-## Add your files
+## :dart: О проекте ##
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+pgAdmin - это ведущий инструмент управления Postgres, самой передовой в мире базы данных с открытым исходным кодом. pgAdmin4 разработан для удовлетворения потребностей как начинающих, так и опытных пользователей Postgres, предоставляя мощный графический интерфейс, который упрощает создание, обслуживание и использование объектов базы данных.
 
+## :sparkles: Особенности ##
+
+:heavy_check_mark: Важнейшая особенность контейнеров — их сравнительно короткий жизненный цикл. Любой контейнер можно остановить, перезапустить или уничтожить, если это необходимо. Данные, которые содержатся в контейнере, при этом тоже пропадут. Так выработалось правило проектирования приложений: не хранить важные данные в контейнере. Такой подход называют Stateless;\
+:heavy_check_mark: Объем контейнеров измеряется в мегабайтах, поскольку в них упаковывают лишь те процессы и зависимости ОС, которые необходимы для выполнения кода. Легковесные контейнеры быстро запускаются и экономят место на диске;\
+:heavy_check_mark: Один контейнер соответствует одному запущенному процессу. Отключение отдельного контейнера для отладки или обновления никак не помешает нормальной работе всего приложения;\
+:heavy_check_mark: Контейнеризация обеспечивает надежную изоляцию процессов и повышает уровень безопасности систем. Приложения, которые работают внутри контейнера, не имеют доступа к основной ОС и не могут на неё влиять;\
+:heavy_check_mark: Благодаря контейнерам можно автоматизировать развертывание приложений на разных хостах;\
+:heavy_check_mark: Использование контейнеров позволяет перейти с монолита на микросервисную архитектуру. За счет этого ускоряется разработка новой функциональности, поскольку нет опасений, что изменения в одной компоненте затронут всю остальную систему;\
+:heavy_check_mark: С точки зрения эффективности контейнеры котируются выше виртуальных машин. На одинаковом оборудовании можно запустить большое количество контейнеров, тогда как ВМ будет в разы меньше. Это важно при использовании облачной инфраструктуры — потребуется меньше ресурсов;
+
+## :rocket: Технологии ##
+
+В данном проекте были использованы следующие инструменты:
+
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+## :white_check_mark: Требования ##
+
+Перед началом :checkered_flag:, вам нужно иметь [Git](https://git-scm.com) и [Docker](https://www.docker.com/) установленными.
+
+## :checkered_flag: Начало ##
+
+```bash
+# Клонируйте этот проект
+$ git clone https://github.com/laspegasuscommunity/postgres.git
+
+# Доступ
+$ cd postgres
+
+# Запустите проект
+$ docker-compose up -d
+
+# Сервер инициализируется в <http://pgadmin:90>
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/laspegasuscommunity/db/pgadmin.git
-git branch -M main
-git push -uf origin main
-```
 
-## Integrate with your tools
+## :memo: Лицензия ##
 
-- [ ] [Set up project integrations](https://gitlab.com/laspegasuscommunity/db/pgadmin/-/settings/integrations)
+Этот проект находится под лицензией MIT. Для получения более подробной информации см. [LICENSE](LICENSE) файл.
 
-## Collaborate with your team
+<h4 align="right"> 
+	Сделано с :heart: <a href="https://github.com/orgs/laspegasuscommunity/people/ponfertato" target="_blank">ponfertato</a>
+</h4> 
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+&#xa0;
 
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+<h4 align="center"> 
+	<a href="#top">Вернуться к началу 🔝</a>
+</h4> 
