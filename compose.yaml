@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  #Это конфигурация Docker Compose для запуска веб-инструмента администрирования pgAdmin для PostgreSQL.
+  pgadmin:
+    container_name: pgadmin
+    depends_on: postgres
+    env_file: pgadmin.env
+    image: dpage/pgadmin4:latest
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
+      traefik.enable: "false"
+    ports:
+      - "90:80"
+    volumes:
+      - "./pgadmin/data:/var/lib/pgadmin"
+
+networks:
+  default:
+    external: true
+    name: $NETWORK
